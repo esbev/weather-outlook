@@ -7,10 +7,11 @@ The weather forecast ...
 ## Table of Contents
 - [Website Preview](#website-preview)
 - [Credits](#credits)
-    - [Code Execution](#code-execution)
     - [Resources](#resources)
         - [Jquery.com](#jquerycom)
         - [Getbootstrap.com](#getboostrapcom)
+        - [Freeformatter.com](#freeformattercom)
+        - [Dayjs.org](#dayjsorg)
 - [Special Thanks](#special-thanks)
 - [License](#license)
 
@@ -21,10 +22,6 @@ The weather forecast ...
 [![name](assets/images/SS.jpg)](https://esbev.github.io/weather-outlook/)
 
 ## Credits
-
-- ### Code Execution
-
-    Bootcamp student Joshua Stanford
 
 NOTE: Click on a thumbnail to view source
 
@@ -38,6 +35,13 @@ NOTE: Click on a thumbnail to view source
 
      - [![name](assets/images/bootstrap.jpg)](https://getbootstrap.com/)
 
+    - #### Freeformatter.com
+
+     - [![name](assets/images/freeformstates.jpg)](https://www.freeformatter.com/usa-state-list-html-select.html)
+
+     - #### Day.js.org
+
+      - [![name](assets/images/dayjs.jpg)](https://day.js.org/docs/en/display/format)
 
 ## Special Thanks
 

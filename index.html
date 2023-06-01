@@ -22,79 +22,83 @@
         <div class="row">
             <div class="card col-2 border-0">
                 <div class="card-body">
-                    <h4>Search for a City:</h4>
-                    <input class="form-control me-2" type="search" placeholder="City, State" aria-label="Search">
-                    <button class="btn btn-info p-1 my-2 w-100">Search</button>
+                    <h6>Search City and State:</h6>
+                    <input id="input-city" class="form-control my-1" type="text" placeholder="City" aria-label="Search">
+                    <select id="state" class="form-control">
+                        <option value="AL">Alabama</option> <option value="AK">Alaska</option> <option value="AZ">Arizona</option> <option value="AR">Arkansas</option> <option value="CA">California</option> <option value="CO">Colorado</option> <option value="CT">Connecticut</option> <option value="DE">Delaware</option>
+                        <option value="DC">District Of Columbia</option> <option value="FL">Florida</option> <option value="GA">Georgia</option> <option value="HI">Hawaii</option> <option value="ID">Idaho</option> <option value="IL">Illinois</option> <option value="IN">Indiana</option> <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option> <option value="KY">Kentucky</option> <option value="LA">Louisiana</option> <option value="ME">Maine</option> <option value="MD">Maryland</option> <option value="MA">Massachusetts</option> <option value="MI">Michigan</option> <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option> <option value="MO">Missouri</option> <option value="MT">Montana</option> <option value="NE">Nebraska</option> <option value="NV">Nevada</option> <option value="NH">New Hampshire</option> <option value="NJ">New Jersey</option> <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option> <option value="NC">North Carolina</option> <option value="ND">North Dakota</option> <option value="OH">Ohio</option> <option value="OK">Oklahoma</option> <option value="OR">Oregon</option> <option value="PA">Pennsylvania</option> <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option> <option value="SD">South Dakota</option> <option value="TN">Tennessee</option> <option value="TX">Texas</option> <option value="UT">Utah</option> <option value="VT">Vermont</option> <option value="VA">Virginia</option> <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option> <option value="WI">Wisconsin</option> <option value="WY">Wyoming</option>                    
+                    </select>
+                    <button id="search-button" class="btn btn-primary p-1 my-1 w-100" type="submit">Search</button>
                 </div>
             </div>
 
             <div class="col-9">
                 <div class="row bg-success text-light text-center">
-                    <h2>Current city + Date + icon</h2>
-                    <p>Temp:</p>
-                    <p>Wind:</p>
-                    <p>Humidity:</p>
+                    <!-- <h2 id="curr-city">Current city + Date + icon</h2>
+                    <p id="curr-temp">Temp:</p>
+                    <p id="curr-wind">Wind:</p>
+                    <p id="curr-humid">Humidity:</p> -->
+                    <h2 id="curr-city"></h2>
+                    <p id="curr-temp"></p>
+                    <p id="curr-wind"></p>
+                    <p id="curr-humid"></p>
+
                 </div>
             </div>
 
             <div class="card col-2 border-0">
-                <div id="cityButtons" class="card-body m-2">
-                    <button id="cityBtn1" class="btn btn-success p-1 my-2 w-100">City1</button>
-                    <button id="cityBtn2" class="btn btn-success p-1 my-2 w-100">City2</button>
-                    <button id="cityBtn3" class="btn btn-success p-1 my-2 w-100">City3</button>
-                    <button id="cityBtn4" class="btn btn-success p-1 my-2 w-100">City4</button>
-                    <button id="cityBtn5" class="btn btn-success p-1 my-2 w-100">City5</button>
-                    <button id="cityBtn6" class="btn btn-success p-1 my-2 w-100">City6</button>
+                <div id="prev-city-container" class="card-body m-2">
+                    <button id="prev-city-st1" class="btn btn-success p-1 my-2 w-100">City1</button>
+                    <button id="prev-city-st2" class="btn btn-success p-1 my-2 w-100">City2</button>
+                    <button id="prev-city-st3" class="btn btn-success p-1 my-2 w-100">City3</button>
+                    <button id="prev-city-st4" class="btn btn-success p-1 my-2 w-100">City4</button>
+                    <button id="prev-city-st5" class="btn btn-success p-1 my-2 w-100">City5</button>
+                    <button id="prev-city-st6" class="btn btn-success p-1 my-2 w-100">City6</button>
                 </div>
             </div>
 
             <div class="col-9 my-4">
-                <h4>5-day Forecast</h4>
-                <div class="row">
+                <h4>5-day Forecast:</h4>
+                <div id="forecast-container" class="row">
                         <div class="card col-2 bg-dark text-light mx-1">
-                            <!-- <div class="card-body bg-dark text-light"> -->
-                            <p>Date</p>
-                            <p>Icon</p>
-                            <p>Temp:</p>
-                            <p>Wind:</p>
-                            <p>Humidity:</p>
-                            <!-- </div> -->
+                            <p id="fut-date-1"></p>
+                            <p id="fut-icon-1">Icon</p>
+                            <p id="fut-temp-1">Temp:</p>
+                            <p id="fut-wind-1">Wind:</p>
+                            <p id="fut-humid-1">Humidity:</p>
                         </div>
                         <div class="card col-2 bg-dark text-light mx-1">
-                            <!-- <div class="card-body bg-dark text-light"> -->
-                            <p>Date</p>
-                            <p>Icon</p>
-                            <p>Temp:</p>
-                            <p>Wind:</p>
-                            <p>Humidity:</p>
-                            <!-- </div> -->
+                            <p id="fut-date-2"></p>
+                            <p id="fut-icon-2">Icon</p>
+                            <p id="fut-temp-2">Temp:</p>
+                            <p id="fut-wind-2">Wind:</p>
+                            <p id="fut-humid-2">Humidity:</p>
                         </div>
                         <div class="card col-2 bg-dark text-light mx-1">
-                            <!-- <div class="card-body bg-dark text-light"> -->
-                            <p>Date</p>
-                            <p>Icon</p>
-                            <p>Temp:</p>
-                            <p>Wind:</p>
-                            <p>Humidity:</p>
-                            <!-- </div> -->
+                            <p id="fut-date-3"></p>
+                            <p id="fut-icon-3">Icon</p>
+                            <p id="fut-temp-3">Temp:</p>
+                            <p id="fut-wind-3">Wind:</p>
+                            <p id="fut-humid-3">Humidity:</p>
                         </div>
                         <div class="card col-2 bg-dark text-light mx-1">
-                            <!-- <div class="card-body bg-dark text-light"> -->
-                            <p>Date</p>
-                            <p>Icon</p>
-                            <p>Temp:</p>
-                            <p>Wind:</p>
-                            <p>Humidity:</p>
-                            <!-- </div> -->
+                            <p id="fut-date-4"></p>
+                            <p id="fut-icon-4">Icon</p>
+                            <p id="fut-temp-4">Temp:</p>
+                            <p id="fut-wind-4">Wind:</p>
+                            <p id="fut-humid-4">Humidity:</p>
                         </div>
                         <div class="card col-2 bg-dark text-light mx-1">
-                            <!-- <div class="card-body bg-dark text-light"> -->
-                            <p>Date</p>
-                            <p>Icon</p>
-                            <p>Temp:</p>
-                            <p>Wind:</p>
-                            <p>Humidity:</p>
-                            <!-- </div> -->
+                            <p id="fut-date-5"></p>
+                            <p id="fut-icon-5">Icon</p>
+                            <p id="fut-temp-5">Temp:</p>
+                            <p id="fut-wind-5">Wind:</p>
+                            <p id="fut-humid-5">Humidity:</p>
                         </div>
 
                 </div>
