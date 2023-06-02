@@ -8,17 +8,18 @@
 // .then(function(data) {
 //     console.log(data);
 // })
-
+const apikey = "8e0d96b38170e9b7a96c40d93fb7248f";
+const today = dayjs();
 var cityInput = $("#input-city");
 var stateDrop = $("#state");
 var searchButton = $("#search-button");
 var city;
 var state;
-const today = dayjs();
 
 function init() {
     //get user location
     popCurr();
+    buildForecastCards();
 }
 
 function search() {
@@ -55,6 +56,21 @@ function popPrevCity() {
     //populate previous cities buttons
     popCurr();
     pop5fore();
+}
+
+function buildForecastCards() {
+    for (i = 1; i <= 5; i++) {
+        var foreDate = today.add(i, "d").format("M / D / YY");
+        var forecastCard = "";
+        forecastCard += '<div class="card col-2 bg-dark text-light mx-1">'
+        forecastCard += '<p id="fut-date-"' + i + '>' + foreDate + '</p>';
+        forecastCard += '<p id="fut-icon-"' + i + '>Icon' +  + '</p>';
+        forecastCard += '<p id="fut-temp-"' + i + '>Temp: ' + + '</p>';
+        forecastCard += '<p id="fut-wind-"' + i + '>Wind: ' + + '</p>';
+        forecastCard += '<p id="fut-humid-"' + i + '>Humidity: ' + + '</p>';
+        forecastCard += "</div>"
+        $("#forecast-container").append(forecastCard);
+    }
 }
 
 init();
