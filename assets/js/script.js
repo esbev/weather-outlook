@@ -26,6 +26,7 @@ var ico = "";
 var tem = "";
 var win = "";
 var hum = "";
+var locationData = [];
 
 function init() {
     //get user location
@@ -33,26 +34,27 @@ function init() {
     buildForecastCards();
 }
 
-function search() {
-    city = cityInput.val();
-    state = stateDrop.val();
-    if (city !== "") {
-        city = city.charAt(0).toUpperCase() + city.slice(1);
-        var locations = JSON.parse(window.localStorage.getItem("location")) || [];
-        var newLocation = {
-            city: city,
-            state: state,
-        }
-//problem here. says locations is not a function ???????
-        // locations.push(newLocation);
-        window.localStorage.setItem("location", JSON.stringify(locations));
-    } else if (city == "") {
-        alert("Enter a city and continue.");
-        return;
-    }
-    goFetch();
-    addCityButton();
-}
+// function search() {
+//     city = cityInput.val();
+//     state = stateDrop.val();
+//     if (city !== "") {
+//         city = city.charAt(0).toUpperCase() + city.slice(1);
+//         var locations = [];
+//         // var locations = JSON.parse(window.localStorage.getItem("location")) || [];
+//         var newLocation = {
+//             city: city,
+//             state: state,
+//         }
+// //problem here. says locations is not a function ???????
+//         locations.push(newLocation);
+//         // window.localStorage.setItem("location", JSON.stringify(locations));
+//     } else if (city == "") {
+//         alert("Enter a city and continue.");
+//         return;
+//     }
+//     goFetch();
+//     addCityButton();
+// }
 
 function goFetch() {
     var requestURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "," + state + "&APPID=" + apikey + "&cnt=5&units=imperial";
@@ -71,16 +73,17 @@ function goFetch() {
         tem = data.main.temp;
         win = data.wind.speed;
         hum = data.main.humidity;
-        console.log(ico);
-        console.log(tem);
-        console.log(win);
-        console.log(hum);
+        popCurr();
+        pop5fore();  
     })
-    popCurr();
-    pop5fore();
 }
-//to do get 5 day forecast data
+
 function popCurr() {
+    console.log(ico);
+    console.log(tem);
+    console.log(win);
+    console.log(hum);
+    console.log("\^ should be data")
     //populate current day weather
     //to do get weather info
 //problem here ico, tem, win, hum are empty for some reason on the first click of the search button
@@ -93,6 +96,7 @@ function popCurr() {
     $("#curr-humid").text("Humidity: " + hum + "\%");
 }
 
+//to do get 5 day forecast data
 function pop5fore() {
     //need to get weather info
     for (i = 1; i <= 5; i++) {
@@ -104,7 +108,6 @@ function pop5fore() {
         $("#fut-humid-" + i).text("Humidity: ");
     }
 }
-
 function addCityButton() {
     //populate previous cities buttons
     var cityButton = "";
@@ -125,6 +128,28 @@ function buildForecastCards() {
         forecastCard += "</div>"
         $("#forecast-container").append(forecastCard);
     }
+}
+
+function search() {
+    city = cityInput.val();
+    state = stateDrop.val();
+    if (city !== "") {
+        city = city.charAt(0).toUpperCase() + city.slice(1);
+        var locations = [];
+        // var locations = JSON.parse(window.localStorage.getItem("location")) || [];
+        var newLocation = {
+            city: city,
+            state: state,
+        }
+//problem here. says locations is not a function ???????
+        locations.push(newLocation);
+        // window.localStorage.setItem("location", JSON.stringify(locations));
+    } else if (city == "") {
+        alert("Enter a city and continue.");
+        return;
+    }
+    goFetch();
+    addCityButton();
 }
 
 init();
