@@ -2,7 +2,7 @@
 
 ## Description
 
-The weather forecast ...
+The weather forecast is for the weather conscious traveler. Just hop on in and make the plans for your journey. The user only needs to type in a city and state and the current weather and a 5 day forecast for that city will be revealed. The weather forecast will create a list of all the cities the user has searched. The user needs only click on a previously searched city from the list to manuever back and forth between selected cities and their weather information. The next time the user visits the site their search history is saved and will show up again without any additional interaction from the user. The user also has the ability to clear the history to create a new list for their next journey. Please remember to grab your belongings and lock your doors and safe travels.
 
 ## Table of Contents
 - [Website Preview](#website-preview)
