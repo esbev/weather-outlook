@@ -38,10 +38,14 @@ NOTE: Click on a thumbnail to view source
     - #### Freeformatter.com
 
      - [![name](assets/images/freeformstates.jpg)](https://www.freeformatter.com/usa-state-list-html-select.html)
+     
+    - #### Day.js.org
 
-     - #### Day.js.org
+     - [![name](assets/images/dayjs.jpg)](https://day.js.org/docs/en/display/format)
+    
 
-      - [![name](assets/images/dayjs.jpg)](https://day.js.org/docs/en/display/format)
+
+
 
 ## Special Thanks
 
