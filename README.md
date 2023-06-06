@@ -2,12 +2,13 @@
 
 ## Description
 
-The weather forecast is for the weather conscious traveler. Just hop on in and make the plans for your journey. The user only needs to type in a city and state and the current weather and a 5 day forecast for that city will be revealed. The weather forecast will create a list of all the cities the user has searched. The user needs only click on a previously searched city from the list to manuever back and forth between selected cities and their weather information. The next time the user visits the site their search history is saved and will show up again without any additional interaction from the user. The user also has the ability to clear the history to create a new list for their next journey. Please remember to grab your belongings and lock your doors and safe travels.
+The weather forecast is for the weather conscious traveler. Just hop on in and make the plans for your journey. The user only needs to type in a city and state then the current weather and a 5 day forecast for that city will be revealed. The weather forecast will create a list of all the cities the user has searched. The user needs only click on a previously searched city from the list to manuever back and forth between selected cities and their weather information. The next time the user visits the site their search history is saved and will show up again without any additional interaction from the user. The user also has the ability to clear the history to create a new list for their next journey. Please remember to grab your belongings and lock your doors.
 
 ## Table of Contents
 - [Website Preview](#website-preview)
 - [Credits](#credits)
     - [Resources](#resources)
+        - [Openweathermap.org](#openweathermaporg)
         - [Jquery.com](#jquerycom)
         - [Getbootstrap.com](#getboostrapcom)
         - [Freeformatter.com](#freeformattercom)
@@ -27,6 +28,10 @@ NOTE: Click on a thumbnail to view source
 
 - ### Resources
 
+    - #### Openweathermap.org
+
+     - [![name](assets/images/openweather.jpg)](https://openweathermap.org/)
+    
     - #### Jquery.com
 
      - [![name](assets/images/jquery.jpg)](https://api.jquery.com/)
@@ -43,10 +48,6 @@ NOTE: Click on a thumbnail to view source
 
      - [![name](assets/images/dayjs.jpg)](https://day.js.org/docs/en/display/format)
     
-
-
-
-
 ## Special Thanks
 
     Thanks goes out to all the instructors and teacher assistants for their clear instruction and prompt and thorough answers to all my questions. Also, to all the students who joined in the study groups for their active participation and alternative perspectives. I was able to gain multiple insights I otherwise may not have gained towards the project without them. There is always strength in numbers.
