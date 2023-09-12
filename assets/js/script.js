@@ -133,6 +133,8 @@ clearButton.click(clearHistory);
 
 $("#prev-city-container").on("click", function (event) {
     var cityID = $(event.target).attr("id");
+    let buttonId = $(event.target).attr("id");
+  console.log(buttonId);
     var tempArr = cityID.split("-");
     city = tempArr[0];
     state = tempArr[1];
