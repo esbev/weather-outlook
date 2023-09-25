@@ -18,7 +18,7 @@ The weather forecast is for the weather conscious traveler. Just hop on in and m
 
 ## Website Preview
 
-[Daily Planner](https://esbev.github.io/weather-outlook/)
+[Weather Outlook](https://esbev.github.io/weather-outlook/)
 
 [![name](assets/images/SS.jpg)](https://esbev.github.io/weather-outlook/)
 
